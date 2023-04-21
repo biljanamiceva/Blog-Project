@@ -1,0 +1,24 @@
+﻿@model Post
+
+
+<div class="card">
+    <img src="https://img.freepik.com/free-photo/marble-compostion-with-colorful-style_23-2147927710.jpg?w=900&t=st=1681487520~exp=1681488120~hmac=575ed54e62e2c3589db78404081fc86ab6ef609d0cf06eff737b6c65c25a7067" class="card-img simple1" alt="...">
+    <div class="card-img-overlay">
+        <div class="m-5 d-flex justify-content-center">
+            <h5 class=" text-start text-dark">@Html.DisplayFor(model => model.Category!.CategoryName)</h5>  <p class="ms-3">&#9679;</p>
+            <h5 class="text-dark ms-3">@Model.PostDate.ToString("dd MMMM yyyy")</h5>
+        </div>
+        <h2 class=" text-dark opacity-80 postTitle text-center mt-5 ">@Html.DisplayFor(model => model.PostTitle)</h2>
+    </div>
+ 
+</div>
+
+<div class="d-flex justify-content-center">
+
+    <img src="@Model.PostImg" class="simple2">
+</div>
+<p class="mt-5">@Html.DisplayFor(model => model.PostDescription)</p>
+@*
+     <h4 class="text-dark ">@Html.DisplayFor(model => model.PostDate.ToString("dd MMM yyyy"))</h4>
+*@
+

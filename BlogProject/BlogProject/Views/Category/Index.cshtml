@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="text-start">
+    <h1 class="title m-5" style="font-size:35px; font-family:'Times New Roman', Times, serif">EXPLORE BY CATEGORY</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="container">               
+                    <div class="text-start">
+                        <a asp-controller="Category" asp-action="Create" class="btn text-white" style="background-color: #d3a72e;">
+                            <i class="bi bi-plus-circle"></i> Create New Category
+                        </a>
+                    </div>
+                <br />
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1596060814207-c8d21f112d00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+            </div>
+        </div>
+
+        <div class="col-md-5 mt-5 ms-5">
+            <div>
+                @foreach (var obj in Model)
+                {
+                    <a asp-controller="Category" asp-action="GetCategoryById" asp-route-id="@obj.CategoryId" style="text-decoration:none" class="text-black">
+                        <h2 class="title1">@obj.CategoryName</h2>
+                        <p>@obj.CategoryDescription...</p>
+                    </a>
+                    <div class="w-15 text-end" role="group">
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.CategoryId" class="btn text-white mx-2" style="background-color: #0a9396"> <i class="bi bi-pencil-square"></i> Edit</a>
+
+                        <button type="submit" style="background-color: #c97c5d" class="btn mx-2 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal_@obj.CategoryId">
+                            <i class="bi bi-trash3"></i> Delete
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal_@obj.CategoryId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #fbf6ee;">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Confirmation</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h1 class="fs-5">Are you sure you want to delete @obj.CategoryName ?</h1>
+
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <form asp-controller="Category" asp-action="DeleteCategory">
+                                            <input type="hidden" name="id" value="@obj.CategoryId">
+                                            <button type="submit" class="btn text-white mx-2" style="background-color: #c97c5d"> <i class="bi bi-trash3"></i> Delete</button>
+                                            @* <button type="submit" class="btn btn-danger mx-2" onclick="return confirm('Are you sure you want to delete @obj.CategoryName ')"> <i class="bi bi-trash3"></i> Delete</button>*@
+                                            <button type="button" class="btn btn-secondary opacity-50" data-bs-dismiss="modal">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr />
+                }
+            </div>
+        </div>
+    </div>
+</div>

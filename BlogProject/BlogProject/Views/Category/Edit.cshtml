@@ -1,0 +1,28 @@
+﻿@model Category
+
+
+<form method="post" asp-action="Edit">
+    <input asp-for="CategoryId" hidden />
+    <div class="boreder p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-dark" style="font-family:'Times New Roman'">Edit Category</h2>
+            <hr />
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="CategoryName"></label>
+            <input asp-for="CategoryName" class="form-control" />
+            <span asp-validation-for="CategoryName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryDescription"></label>
+            <input asp-for="CategoryDescription" class="form-control" />
+            <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn text-white" style="width: 150px; background-color: #d3a72e;">Update</button>
+
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary opacity-50" style="width:150px">Back To List</a>
+    </div>
+</form>
+

@@ -1,0 +1,54 @@
+﻿@model Post
+
+
+<form method="post" asp-action="Edit">
+    <input asp-for="PostId" hidden />
+    <div class="boreder p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-dark" style="font-family:'Times New Roman'">Edit Post</h2>
+            <hr />
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="PostTitle"></label>
+            <input asp-for="PostTitle" class="form-control" />
+            <span asp-validation-for="PostTitle" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PostDescription"></label>
+            <textarea asp-for="PostDescription" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="PostDescription" class="text-danger"></span>
+        </div>
+         <div class="mb-3">
+           <label asp-for="CurrentCategoryId" class="form-label"></label>
+            <select asp-for="CurrentCategoryId" class="form-control">
+                @foreach (var category in ViewData["Category"] as IList<Category>)
+                {
+                   <option value="@category.CategoryId">@category!.CategoryName </option>
+                }
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="PostAuthor"></label>
+            <input asp-for="PostAuthor" class="form-control" />
+            <span asp-validation-for="PostAuthor" class="text-danger"></span>
+        </div>
+
+        @*<div class="mb-3">
+            <label asp-for="PostDate"></label>
+            <input asp-for="PostDate" class="form-control" />
+            <span asp-validation-for="PostDate" class="text-danger"></span>
+        </div>
+        *@
+        <div class="mb-3">
+            <label asp-for="PostImg"></label>
+            <input asp-for="PostImg" class="form-control" />
+            <span asp-validation-for="PostImg" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn text-white" style="width: 150px; background-color: #d3a72e;">Update</button>
+        <a asp-controller="Post" asp-action="Index" class="btn btn-secondary opacity-50" style="width:150px">Back To List</a>
+    </div>
+</form>

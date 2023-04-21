@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #fbf6ee;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 9vw;
+    text-align: center;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 500;
+}
+
+.nav-text {
+    font-family: 'Albra Display Regular';
+    font-size: 20px;
+}
+
+.jumbotron {
+    background-size: cover;
+    object-fit: cover;
+    height: 65vh;
+    width: 90%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.cardImage {
+    width: 25vw;
+    height: 25vh;
+    object-fit: cover;
+    object-position: 100% 40%;
+}
+
+.jumbotron-inner {
+    background-color: rgba(255,255,255);
+    position: absolute;
+    top: 59vh;
+    left: 10%;
+    right: 20%;
+}
+
+.blockquote {
+    font-family: Sweet Sans Bold;
+    color: #deb72e;
+}
+
+.next-col {
+    width: 18vw;
+    height: 25vh;
+    object-fit: cover;
+    object-position: 100% 40%;
+}
+
+.paragraph {
+    font-family: 'Proxima Nova Regular';
+    font-size: 1.4vw;
+}
+
+.title1 {
+    color: black;
+    font-family: Albra Display Light;
+    font-size: 2.2vw;
+}
+
+.title2 {
+    font-family: 'Albra Display Light';
+    font-size: 1.7vw;
+}
+
+.ss {
+    width: 18rem;
+    border: none;
+    background-color: #fbf6ee;
+}
+
+.simple {
+    margin-top: 295px;
+    background-image: linear-gradient(142deg, rgba(249,168,107,1) 0%, rgba(242,205,109,1) 100%);
+}
+.simple1 {
+    border: none;
+    height: 55vh;
+    object-fit: cover;
+    object-position: 100% 60%;
+    color: black;
+    border: none;
+  
+}
+.simple2 {
+    border: none;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 100% 60%;
+    color: black;
+    border: none;
+    position: relative;
+    margin-top: -7vw;
+}
+
+.postTitle {
+    font-family: 'Albra Display Regular';
+    font-size: 5vw;
+}
+.title1:hover {
+    color: #d3a72e;
+}
+
+.title3 {
+    font-size: 18px;
+}
+
+.titleB {
+    font-family: 'Albra Display Regular';
+    width: 25vw;
+}
+
+.titleB:hover {
+        color: #d3a72e;
+}
+.cardBodys {
+    width: 20vw;
+    height: 30vh;
+}
+
+.signInBtn:hover {
+    background-color: #d3a72e;
+    color: white;
+}
+
+
+
+@media only screen and (min-width: 1668px) {
+    .titleB{
+        width:20vw;
+    }
+    .title1 {
+        font-size: 1.5vw;
+    }
+
+    .title2 {
+        font-size: 1.2vw;
+    }
+
+    .paragraph {
+        font-size: 1vw;
+    }
+
+    .simple {
+        margin-top: 290px;
+    }
+
+    .next-col {
+        width: 15vw;
+        height: 30vh;
+    }
+
+    .cardImage {
+        width: 20vw;
+        height: 30vh;
+        object-fit: cover;
+        object-position: 100% 40%;
+    }
+    .postTitle {
+        font-size: 5vw;
+    }
+    .simple1 {
+        height: 60vh;
+    }
+
+    .simple2 {
+        border: none;
+        height: 55vh;
+        object-fit: cover;
+        object-position: 100% 60%;
+        color: black;
+        border: none;
+        position: relative;
+        margin-top: -4vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardImage {
+        width: 60vw;
+        height: 25vh;
+        object-fit: cover;
+        object-position: 100% 40%;
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+    }
+
+    .paragraph {
+        font-size: 2.9vw;
+    }
+
+    .title1 {
+        font-size: 3.9vw;
+    }
+
+    .title2 {
+        font-size: 4vw;
+    }
+
+    .title3 {
+        font-size: 14px;
+    }
+
+    .next-col {
+        width: 360px;
+        height: 290px;
+        object-fit: cover;
+        object-position: 100% 40%;
+        margin-top: 25vh;
+    }
+
+    .ss {
+        width: 28rem;
+    }
+
+    .simple {
+        margin-top: 20px;
+        background-image: linear-gradient(142deg, rgba(249,168,107,1) 0%, rgba(242,205,109,1) 100%);
+    }
+    .simple1 {
+        height: 45vh;
+    }
+    .simple2 {
+        border: none;
+        height: 30vh;
+        object-fit: cover;
+        object-position: 100% 60%;
+        color: black;
+        border: none;
+        position: relative;
+        margin-top: -10vw;
+    }
+    .titleB{
+        width: 60vw;
+    }
+    .postTitle {
+       font-size: 6vw;
+    }
+}
